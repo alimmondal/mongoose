@@ -1,5 +1,6 @@
 import cors from "cors";
-import express, { Application, NextFunction, Request, Response } from "express";
+import express, { Application } from "express";
+import userRouter from "./app/modules/user/user.route";
 const app: Application = express();
 
 // using cors
@@ -16,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
     step4:Database Query on model
     2. Create a Schema corresponding to the document interface.
  */
-app.get("/", (req: Request, res: Response, next: NextFunction) => {});
+app.get("/api/v1/user", userRouter);
 export default app;
 
 /*
