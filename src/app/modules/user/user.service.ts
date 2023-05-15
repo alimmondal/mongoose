@@ -20,9 +20,7 @@ export const getUserByIdFromDb = async (
   const user = await User.findOne({ id: payload }, { name: 1 });
   return user;
 };
-export const getAdminUsersByIdFromDb = async (
-  payload: string
-): Promise<IUser[]> => {
-  const admin = await User;
-  return user;
+export const getAdminUsersByFromDb = async () => {
+  const admin = await User.getAdminUsers();
+  return admin;
 };
