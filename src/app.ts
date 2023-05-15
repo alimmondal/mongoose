@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
     step4:Database Query on model
     2. Create a Schema corresponding to the document interface.
  */
-app.get("/api/v1/user", userRouter);
+app.use("/api/v1/user", userRouter);
 export default app;
 
 /*
