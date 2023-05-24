@@ -14,12 +14,15 @@ export const getUsersFromDb = async (): Promise<IUser[]> => {
   const users = await User.find();
   return users;
 };
+
+// get users by id
 export const getUserByIdFromDb = async (
   payload: string
 ): Promise<IUser | null> => {
-  const user = await User.findOne({ id: payload }, { name: 1 });
+  const user = await User.findOne({ _id: payload });
   return user;
 };
+
 export const getAdminUsersByFromDb = async () => {
   const admin = await User.getAdminUsers();
   return admin;

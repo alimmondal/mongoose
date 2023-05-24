@@ -5,11 +5,11 @@ import { IUser, IUserMethods, UserModel } from "./user.interface";
 // type UserModel = Model<IUser, {}, IUserMethods>;
 
 const userSchema = new Schema<IUser, UserModel, IUserMethods>({
-  id: {
-    type: String,
-    required: true,
-    unique: true,
-  },
+  // id: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  // },
   role: {
     type: String,
     required: true,
